@@ -1,9 +1,7 @@
+
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="https://bulma.io">
       <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
@@ -18,7 +16,7 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-      <a class="navbar-item">
+      <a class="navbar-item" href="/">
         Home
       </a>
 
@@ -32,7 +30,7 @@
         </a>
 
         <div class="navbar-dropdown">
-          <a class="navbar-item">
+          <a class="navbar-item" href="about">
             About
           </a>
           <a class="navbar-item">
@@ -63,12 +61,9 @@
     </div>
   </div>
 </nav>
-
   </div>
   <router-view/>
 </template>
 
 <style lang="scss">
-
-
 </style>
