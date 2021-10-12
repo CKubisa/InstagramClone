@@ -1,18 +1,20 @@
-<!--- Copy when he posts it  --->
 <template>
-  <Nav />
-  <router-view/>
+    <div class="container">
+        <Nav />
+
+        <router-view/>        
+    </div>
+
 </template>
 
 <style lang="scss">
 </style>
 
 <script>
-import {Nav} from "./components/Nav";
-
+import Nav from "./components/Nav";
 export default {
-  cocomponents: {
-    Nav
-  }
+    components: {
+        Nav
+    }
 }
 </script>

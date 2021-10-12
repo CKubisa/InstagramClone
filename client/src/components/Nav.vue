@@ -1,23 +1,26 @@
-<!--- Copy his navbar when he posts it  --->
 <template>
-<nav class="navbar" role="navigation" aria-label="main navigation">
+  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="https://bulma.io">
       <img src="../assets/logo.png" height="28">
-      Be Happy
+      <h3 class="title">Be Happy</h3>
     </a>
 
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" :class="{'is-active': isActive }" @click="isActive = !isActive" >
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </a>
   </div>
 
-  <div id="navbarBasicExample" class="navbar-menu">
+  <div class="navbar-menu " :class="{'is-active': isActive }">
     <div class="navbar-start">
       <a class="navbar-item" href="/">
         Home
+      </a>
+
+      <a class="navbar-item" href="/feed">
+        Feed
       </a>
 
       <a class="navbar-item">
@@ -49,30 +52,27 @@
 
     <div class="navbar-end">
       <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light">
-            Log in
-          </a>
-        </div>
+        <login-badge />
       </div>
     </div>
   </div>
 </nav>
+
 </template>
 
 <script>
+import LoginBadge from './LoginBadge';
 export default {
-    data: {
+    data(){
         return {
             isActive: false
         }
+    },
+    components: {
+        LoginBadge,
     }
 }
 </script>
 
 <style>
-
 </style>
