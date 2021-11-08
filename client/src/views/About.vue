@@ -3,3 +3,18 @@
     <h1>This is an about page</h1>
   </div>
 </template>
+
+</template>
+
+<script>
+export default {
+  name: 'About',
+  components: {
+    
+  }
+}
+</script>
+
+<style>
+
+</style>

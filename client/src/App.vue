@@ -3,7 +3,7 @@
         <div class="columns">
             <div class="column">
                 <Nav />
-                <messages />
+                <Messages />
                 <router-view/>                 
             </div>
         </div>
