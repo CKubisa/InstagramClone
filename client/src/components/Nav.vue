@@ -62,6 +62,7 @@
 
 <script>
 import LoginBadge from './LoginBadge';
+
 export default {
     data(){
         return {
@@ -75,4 +76,5 @@ export default {
 </script>
 
 <style>
+
 </style>

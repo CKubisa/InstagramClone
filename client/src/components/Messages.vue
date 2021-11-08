@@ -9,6 +9,7 @@
 
 <script>
 import session from "../services/session";
+
 export default {
     data: ()=> ({
         messages: session.messages

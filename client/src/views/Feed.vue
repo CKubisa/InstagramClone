@@ -21,6 +21,7 @@
 import Post from '../components/Post.vue';
 import session from "../services/session";
 import { GetWall } from "../services/posts";
+
 export default {
     components: {
         Post
@@ -29,7 +30,9 @@ export default {
         posts: GetWall(session.user.handle)
     })
 }
+
 </script>
 
 <style>
+
 </style>
