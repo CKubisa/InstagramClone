@@ -1,5 +1,3 @@
-/* B"H
-*/
 const Users = require( "./users");
 const { ObjectId } = require('bson');
 const { client } = require('./mongo');
