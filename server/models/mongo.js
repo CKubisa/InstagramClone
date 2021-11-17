@@ -1,13 +1,9 @@
+
 const { MongoClient } = require('mongodb');
-
-const uri = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster0.ooi3z.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
-
+const uri = "mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster0.ifcmm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-
-
-const isConnected = client.connect();
-
-
-module.exports = {
-    client, isConnected
-}
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
